@@ -25,15 +25,15 @@
       ////////////////////////////////////////////////////////////////////////////
       var exports = {};
       exports.saveAddListener = function saveAddListener(controllerScope, unbindFunction) {
-        if (!scopeWatches[controllerScope.id]) {
-          scopeWatches[controllerScope.id] = controllerScope.$on('$destroy', function () {
-            callControllersUnbindFunction(controllerScope.id);
-            unbindScopeWatch(controllerScope.id);
+        if (!scopeWatches[controllerScope.$id]) {
+          scopeWatches[controllerScope.$id] = controllerScope.$on('$destroy', function () {
+            callControllersUnbindFunction(controllerScope.$id);
+            unbindScopeWatch(controllerScope.$id);
           });
-          unbindFunctions[controllerScope.id] = [];
-          unbindFunctions[controllerScope.id].push(unbindFunction);
+          unbindFunctions[controllerScope.$id] = [];
+          unbindFunctions[controllerScope.$id].push(unbindFunction);
         } else {
-          unbindFunctions[controllerScope.id].push(unbindFunction);
+          unbindFunctions[controllerScope.$id].push(unbindFunction);
         }
       };
       return exports;

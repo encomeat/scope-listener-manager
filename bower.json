@@ -1,0 +1,14 @@
+{
+  "name": "tpl.scope-listener-manager",
+  "version": "1.0.0",
+  "main": [
+    "dist/scope-listener-manager.js",
+  ],
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "angular": "latest",
+    "angular-mocks": "latest"
+  }
+}

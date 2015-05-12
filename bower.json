@@ -1,6 +1,6 @@
 {
   "name": "tpl.scope-listener-manager",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": [
     "dist/scope-listener-manager.js"
   ],
